@@ -2,6 +2,7 @@ import { Module, DynamicModule } from "@nestjs/common";
 import { LoggerModuleAsyncParams, Params } from "./params";
 import { LoggerCoreModule } from "./LoggerCoreModule";
 
+@Global()
 @Module({})
 export class LoggerModule {
   static forRoot(params?: Params | undefined): DynamicModule {
